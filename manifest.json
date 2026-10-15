@@ -1,0 +1,14 @@
+{
+  "name": "DOCA WMS",
+  "short_name": "DOCA",
+  "description": "Prep center e fulfillment: estoque, saídas e cobrança",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07061A",
+  "theme_color": "#07061A",
+  "icons": [
+    {"src": "icon-v2.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"},
+    {"src": "favicon-192.png", "sizes": "192x192", "type": "image/png"}
+  ]
+}
