@@ -429,7 +429,7 @@ function render(){
 /* ---------- PAINEL ---------- */
 function vPainel(){
   const cs=act(S.cli);
-  if(!cs.length)return firstSteps();
+  const vazio=!cs.length;
   const ym=ymNow(),hoje=today();
   const scope=S.fcli?cs.filter(c=>c.id===S.fcli):cs;const ids=new Set(scope.map(c=>c.id));
   const docsM=S.doc.filter(d=>ids.has(d.cliente_id)&&d.status!=='cancelado'&&String(d.data).slice(0,7)===ym);
@@ -488,6 +488,7 @@ function vPainel(){
      ${kpi('m³ médio no mês',fn(serie.length?serie.reduce((a,x)=>a+x.m3,0)/serie.length:0,3),'base da armazenagem')}
      ${kpi('Clientes ativos',fn(scope.length),`${cnt.parado} sem movimento`)}
     </div>
+    ${vazio?`<div class="mb">${firstSteps()}</div>`:''}
     <div class="card pad mb">
      <div class="row mb" style="align-items:center"><h2 style="margin:0;font-size:16px">Ciclo do mês por cliente</h2><span class="mu sm">${ymExt(ym)}</span>
       <div class="right row" style="gap:8px"><label class="f" style="min-width:200px"><input data-f2="pq" value="${esc(S.pq)}" placeholder="Buscar cliente, CNPJ, contato…"></label><button class="btn" data-act="newcli">＋ Novo cliente</button></div></div>
@@ -498,7 +499,7 @@ function vPainel(){
        <td>${stepsHtml(r.steps)}</td>
        <td class="nowrap">${r.last?`<b>${dshort(r.last.data)}</b> <span class="mu">${WD[new Date(r.last.data+'T12:00').getDay()].replace(' feira','')}</span><div class="mu sm">${TIPOS[r.last.tipo]} · ${qtdDoc(r.last)} un</div>`:'<span class="mu">—</span>'}</td>
        <td style="min-width:104px"><div class="bar"><i style="width:${Math.round(r.cm/maxm*100)}%"></i></div><div class="mu sm">${fn(r.cm,3)} m³ · ${fn(r.cu)} un</div></td>
-       <td class="n"><b>${brl(r.f.total)}</b><div class="mu sm">${r.f.pedidos} saídas</div></td></tr>`).join(''):`<tr><td colspan="5" class="mu">Nenhum cliente neste filtro.</td></tr>`}
+       <td class="n"><b>${brl(r.f.total)}</b><div class="mu sm">${r.f.pedidos} saídas</div></td></tr>`).join(''):`<tr><td colspan="5" class="mu">${vazio?'Nenhum cliente ainda. Cadastre o primeiro ou carregue os dados de exemplo.':'Nenhum cliente neste filtro.'}</td></tr>`}
      </tbody></table></div>
     </div>
     <div class="grid g2">
@@ -598,7 +599,7 @@ function alertas(cs){const a=[];const ids=new Set(cs.map(c=>c.id));
   return a}
 function firstSteps(){
   const hasP=S.prod.length>0,hasE=S.doc.some(d=>d.tipo==='entrada'),hasS=S.doc.some(d=>d.tipo==='saida');
-  return `<div class="card pad" style="max-width:680px">
+  return `<div class="card pad">
    <h2 style="font-size:16px">Bem-vindo ao DOCA WMS</h2>
    <p class="mu">Comece em 5 passos. Ou carregue um exemplo completo para ver tudo funcionando.</p>
    <div class="steps mt">
