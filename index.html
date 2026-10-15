@@ -157,6 +157,82 @@ details summary{cursor:pointer;color:var(--li);font-size:12px;margin:8px 0}
 .mb{margin-bottom:12px}.mt{margin-top:12px}
 .w100{width:100%}
 textarea.paste{width:100%;min-height:110px;background:var(--s1);border:1px solid var(--ln);border-radius:10px;padding:10px;font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--tx)}
+
+/* v2 painel denso */
+.gs{position:relative;flex:0 1 380px;min-width:0}
+.gs input{width:100%;background:var(--s1);border:1px solid var(--ln);border-radius:999px;padding:8px 14px 8px 34px;color:var(--tx);font-size:12.5px;outline:none}
+.gs input:focus{border-color:var(--bt)}
+.gs .mag{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--mu);font-size:13px}
+#gres{position:absolute;top:calc(100% + 6px);left:0;right:0;z-index:40;max-height:360px;overflow:auto;padding:6px}
+#gres .gr{all:unset;box-sizing:border-box;display:flex;gap:10px;align-items:center;width:100%;padding:7px 10px;border-radius:10px;cursor:pointer;font-size:12px}
+#gres .gr:hover{background:var(--s3)}
+.icb{all:unset;cursor:pointer;position:relative;width:34px;height:34px;border-radius:50%;border:1px solid var(--ln);display:flex;align-items:center;justify-content:center;background:var(--s1);flex:none}
+.icb i{position:absolute;top:-3px;right:-3px;min-width:16px;height:16px;border-radius:9px;background:var(--bad);color:#fff;font-size:9.5px;font-style:normal;display:flex;align-items:center;justify-content:center;padding:0 4px;font-weight:700}
+.uchip{display:flex;align-items:center;gap:8px;flex:none}
+.uchip b{display:block;font-size:12px;line-height:1.1}.uchip small{color:var(--mu);font-size:10px}
+.av{width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#fff;background:var(--bt);flex:none;border:2px solid rgba(255,255,255,.12)}
+.hero{position:relative;overflow:hidden;min-height:270px;padding:30px 30px 64px;border-radius:20px}
+.hero-txt{position:relative;z-index:2;max-width:430px}
+.hero .kick{letter-spacing:4px;font-size:10px;color:var(--li)}
+.hero .hl{font-weight:900;font-size:34px;line-height:1.05;margin-top:10px}
+.hero .hl span{color:transparent;-webkit-text-stroke:1.3px var(--li)}
+.hero .rule{width:44px;height:1px;background:var(--li);margin:14px 0}
+.hero .sub{font-size:12.5px;color:var(--mu)}
+.hero .sub b{color:var(--tx)}
+.hero-art{position:absolute;top:0;bottom:0;right:0;left:36%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 28%);mask-image:linear-gradient(90deg,transparent,#000 28%)}
+.hsvg{width:100%;height:100%;display:block}
+.stages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:-48px 18px 16px;position:relative;z-index:3}
+.stage{position:relative;overflow:hidden;padding:12px 14px;min-height:96px;background:rgba(25,21,58,.92)}
+.st-h{font-size:12px;font-weight:600;display:flex;gap:8px;align-items:center;position:relative;z-index:1}
+.st-ic{width:22px;height:22px;border-radius:7px;background:var(--bt);display:inline-flex;align-items:center;justify-content:center;font-size:12px}
+.st-v{font-size:24px;font-weight:700;margin-top:6px;position:relative;z-index:1}.st-v small{font-size:11px;color:var(--mu);font-weight:400}
+.st-s{font-size:11px;color:var(--li);position:relative;z-index:1}
+.st-art{position:absolute;right:-4px;bottom:-6px;width:92px;opacity:.28}
+.dash{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:14px}
+.dmain{min-width:0}.dside{display:grid;gap:12px;align-content:start;min-width:0}
+@media (max-width:1200px){.dash{grid-template-columns:minmax(0,1fr)}.dside{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}}
+@media (max-width:899px){.hero{padding:20px 18px 70px;min-height:230px}.hero .hl{font-size:26px}.hero-art{left:0;opacity:.32;-webkit-mask-image:none;mask-image:none}.stages{grid-template-columns:repeat(2,minmax(0,1fr));margin:-56px 8px 12px;gap:8px}.st-v{font-size:20px}.gs,.uchip{display:none}.dside{grid-template-columns:minmax(0,1fr)}}
+table.jt td{padding:10px 8px;border-bottom:1px solid rgba(43,37,86,.6)}
+.who{display:flex;gap:10px;align-items:center;min-width:170px;max-width:240px}
+.who .tag{margin-top:3px}
+.steps2{display:flex;align-items:flex-start;min-width:236px}
+.sp{flex:1;position:relative;text-align:center;font-size:9px;color:var(--mu);min-width:0}
+.sp i{display:block;width:11px;height:11px;border-radius:50%;margin:0 auto 4px;border:1.5px solid #4a3f8c;background:var(--bg);position:relative;z-index:1}
+.sp::before{content:'';position:absolute;top:5px;left:-50%;right:50%;height:2px;background:#2B2556}
+.sp:first-child::before{display:none}
+.sp.on i{background:var(--li);border-color:var(--li)}
+.sp.on::before{background:var(--li)}
+.sp.cur i{border-color:var(--wa);box-shadow:0 0 0 3px rgba(255,200,87,.2)}
+.sp.cur span{color:var(--wa);font-weight:600}
+.tl .tli{display:grid;grid-template-columns:40px 10px 1fr;gap:8px;padding:7px 0;border-bottom:1px solid rgba(43,37,86,.6);font-size:12px;align-items:start}
+.tl .tli:last-child{border-bottom:0}.tl .hh{color:var(--mu);font-size:11px;padding-top:1px}.tl .tli.cx{opacity:.5}
+.asst{position:relative;overflow:hidden;padding:16px;background:linear-gradient(135deg,#5b2bd0,#2a1a6e);border-color:#6a4bd8}
+.asst .kick{letter-spacing:4px;font-size:9.5px;color:var(--pa);opacity:.8}
+.asst .aname{font-size:28px;font-weight:900;letter-spacing:3px;margin:2px 0 8px;color:transparent;-webkit-text-stroke:1.2px var(--pa)}
+.asst .al{padding:2px 0;position:relative;z-index:1;max-width:82%}
+.asst .row{position:relative;z-index:1}
+.asst .pill{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25);color:#fff}
+.asst .pill.on{background:var(--pa);color:#2a1a6e;border-color:var(--pa)}
+.aface{position:absolute;right:-18px;top:6px;width:120px;opacity:.9}
+.cals{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cal-t{font-size:11px;font-weight:600;margin-bottom:4px;text-transform:capitalize}
+.cal-g{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;font-size:10px;text-align:center}
+.cal-g span{padding:3px 0;border-radius:6px;position:relative;color:var(--mu)}
+.cal-g .cw{font-weight:600;color:var(--li);font-size:9px}
+.cal-g .cd.has{color:var(--tx);cursor:pointer}
+.cal-g .cd.has::after{content:'';position:absolute;left:50%;bottom:0;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--li)}
+.cal-g .cd.td{background:var(--bt);color:#fff}
+.chart{width:100%;height:auto;display:block}
+.sbar{display:flex;height:16px;border-radius:9px;overflow:hidden;background:var(--s3);margin:6px 0 12px}
+.sbar i{display:block;height:100%}
+.leg .lg{display:grid;grid-template-columns:12px 1fr auto 40px;gap:8px;align-items:center;font-size:12px;padding:4px 0}
+.leg .lg .mu{text-align:right}
+.sw{width:10px;height:10px;border-radius:3px}
+.hb .hbr{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(60px,1fr) 70px;gap:10px;align-items:center;padding:5px 0;font-size:12px}
+.hbl{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.hbv{text-align:right;white-space:nowrap}
+.kstrip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:899px){.kstrip{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.dside2 .card{margin-bottom:12px}
 </style>
 </head>
 <body>
@@ -165,7 +241,7 @@ textarea.paste{width:100%;min-height:110px;background:var(--s1);border:1px solid
 <div id="login" hidden>
   <div class="card logincard">
     <div class="brand">DOCA<span>WMS</span></div>
-    <div class="mu sm" style="margin-bottom:18px">Prep center & fulfillment · estoque, saídas e cobrança</div>
+    <div class="mu sm" style="margin-bottom:18px">Prep center & fulfillment · estoque, saídas e cobrança · v2.0</div>
     <label class="f mb">E-mail<input id="lemail" type="email" autocomplete="username"></label>
     <label class="f mb">Senha<input id="lpass" type="password" autocomplete="current-password"></label>
     <div id="lerr" class="sm err mb" hidden></div>
@@ -177,13 +253,17 @@ textarea.paste{width:100%;min-height:110px;background:var(--s1);border:1px solid
 <div id="app" hidden>
   <aside class="side">
     <div class="brand">DOCA<span>WMS</span></div>
+    <div class="mu" style="font-size:10px;padding:0 8px 12px;margin-top:-10px">versão 2.0 · painel completo</div>
     <nav class="nav" id="nav"></nav>
   </aside>
   <div class="wrap">
     <header class="top">
       <div class="brand mbrand">DOCA<span>WMS</span></div>
       <h1 id="vtitle"></h1>
+      <div class="gs"><span class="mag">⌕</span><input id="gsearch" placeholder="Buscar cliente, SKU, EAN, pedido, NF…" autocomplete="off"><div id="gres" class="card" hidden></div></div>
+      <button class="icb" data-act="bell" title="Alertas"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><i id="bellN" hidden></i></button>
       <select id="fcli" class="fi" style="width:auto;max-width:200px;min-height:32px;padding:4px 8px;font-size:12px"></select>
+      <div class="uchip"><span class="av" id="uav">?</span><span><b id="uname"></b><small>Admin</small></span></div>
     </header>
     <main id="main"></main>
   </div>
@@ -216,7 +296,7 @@ const MKTS=['Mercado Livre','Shopee','Amazon','Magalu','Site próprio','Outro'];
 const MOTIVOS_DEV=['Arrependimento','Avaria no transporte','Endereço inválido','Recusa na entrega','Outro'];
 const TIPOS={entrada:'Entrada',saida:'Saída',devolucao:'Devolução',ajuste:'Ajuste'};
 
-const S={user:null,cli:[],prod:[],doc:[],fech:[],L:{},view:'painel',fcli:'',form:null,mini:null,edit:null,q:'',hf:'todos',ht:'',paste:null,dbErr:null,open:null,ate:'',fcm:{c:'',m:''}};
+const S={user:null,cli:[],prod:[],doc:[],fech:[],L:{},view:'painel',fcli:'',form:null,mini:null,edit:null,q:'',hf:'todos',ht:'',paste:null,dbErr:null,open:null,ate:'',fcm:{c:'',m:''},pf:'todos',pq:'',hd:'',gq:''};
 
 /* ---------- helpers ---------- */
 const $=s=>document.querySelector(s);
@@ -326,7 +406,7 @@ function buildNav(){
   $('#bnav').innerHTML=BOTTOM.map(k=>{const v=VIEWS.find(x=>x[0]===k);return `<button data-act="go" data-v="${k}" class="${S.view===k?'on':''}"><span class="ic">${v[1]}</span>${v[2]}</button>`}).join('')+`<button data-act="more" class="${BOTTOM.includes(S.view)?'':'on'}"><span class="ic">⋯</span>Mais</button>`;
   $('#snav').innerHTML=VIEWS.filter(v=>!BOTTOM.includes(v[0])).map(navBtn).join('');
 }
-function go(v){S.view=v;S.form=null;S.edit=null;S.mini=null;S.paste=null;S.open=null;$('#sheet').hidden=true;
+function go(v){S.view=v;S.hd='';S.form=null;S.edit=null;S.mini=null;S.paste=null;S.open=null;$('#sheet').hidden=true;
   if(['entrada','saida','devolucao'].includes(v))newForm(v);
   buildNav();render();window.scrollTo(0,0)}
 
@@ -337,6 +417,8 @@ function render(){
   const fc=$('#fcli');const ac=act(S.cli).sort((a,b)=>a.nome.localeCompare(b.nome));
   if(S.fcli&&!cli(S.fcli))S.fcli='';
   fc.innerHTML=`<option value="">Todos os clientes</option>`+ac.map(c=>`<option value="${c.id}" ${S.fcli===c.id?'selected':''}>${esc(c.nome)}</option>`).join('');
+  const bn=$('#bellN');const scopeA=act(S.cli).filter(c=>!S.fcli||c.id===S.fcli);const nA=scopeA.length?alertas(scopeA).length:0;bn.hidden=!nA;bn.textContent=nA;
+  const em=(S.user&&S.user.email)||'';$('#uname').textContent=em.split('@')[0]||'';$('#uav').textContent=(em[0]||'?').toUpperCase();
   let h='';
   if(S.dbErr==='tabelas')h+=`<div class="banner"><b>Falta criar as tabelas.</b> Abra o Supabase → SQL Editor, cole o arquivo <b>doca_tabelas.sql</b> e clique em Run. Depois recarregue esta página.</div>`;
   else if(S.dbErr)h+=`<div class="banner">Erro ao carregar dados: ${esc(S.dbErr)}</div>`;
@@ -349,34 +431,156 @@ function vPainel(){
   const cs=act(S.cli);
   if(!cs.length)return firstSteps();
   const ym=ymNow(),hoje=today();
-  const scope=S.fcli?cs.filter(c=>c.id===S.fcli):cs;
-  let un=0,m3=0,ped=0,fat=0;const rows=[];
-  for(const c of scope){let cu=0,cm=0;for(const p of S.prod.filter(p=>p.cliente_id===c.id)){const s=saldo(p.id,hoje).tot;cu+=s;cm+=s*m3u(p)}
-    const f=fatura(c.id,ym);un+=cu;m3+=cm;ped+=f.pedidos;fat+=f.total;rows.push({c,cu,cm,f,skus:prodsDe(c.id).length})}
+  const scope=S.fcli?cs.filter(c=>c.id===S.fcli):cs;const ids=new Set(scope.map(c=>c.id));
+  const docsM=S.doc.filter(d=>ids.has(d.cliente_id)&&d.status!=='cancelado'&&String(d.data).slice(0,7)===ym);
+  const of=t=>docsM.filter(d=>d.tipo===t);
+  const ent=of('entrada'),sai=of('saida'),dev=of('devolucao');
+  const hj=a=>a.filter(d=>d.data===hoje);
+  const uEnt=ent.reduce((a,d)=>a+qtdDoc(d),0),uSai=sai.reduce((a,d)=>a+qtdDoc(d),0),uDev=dev.reduce((a,d)=>a+qtdDoc(d),0);
+  let un=0,m3=0,skus=0,fat=0;const rows=[];const serie=[];const comp={arm:0,op:0,fr:0,fx:0};
+  for(const c of scope){let cu=0,cm=0;const ps=S.prod.filter(p=>p.cliente_id===c.id);for(const p of ps){const s=saldo(p.id,hoje).tot;cu+=s;cm+=s*m3u(p)}
+    const f=fatura(c.id,ym);un+=cu;m3+=cm;fat+=f.total;skus+=prodsDe(c.id).length;
+    comp.arm+=f.arm;comp.op+=f.prep+f.extra;comp.fr+=f.q1+f.q2;comp.fx+=f.fixo+f.endf+(f.mens||0);
+    (f.serie||[]).forEach((x,i)=>{serie[i]=serie[i]||{d:x.d,m3:0,fut:x.fut};serie[i].m3+=x.m3});
+    const cd=S.doc.filter(d=>d.cliente_id===c.id&&d.status!=='cancelado');const cdm=cd.filter(d=>String(d.data).slice(0,7)===ym);
+    const last=[...cd].sort((a,b)=>a.data<b.data?1:a.data>b.data?-1:(a.created_at<b.created_at?1:-1))[0];
+    const div=cdm.some(d=>d.divergencia);const fx=!!fechado(c.id,ym);
+    const semPreco=!N(c.valor_m3)&&!N(c.prep_pedido)&&!N(c.prep_unidade)&&!N(c.full_unidade);
+    const steps=[['Entrada',cdm.some(d=>d.tipo==='entrada')],['Estoque',cu>0],['Saída',cdm.some(d=>d.tipo==='saida')],['Conferido',!div&&cdm.length>0],['Preço',!semPreco],['Fechado',fx]];
+    const st=fx?['ok','Fechado']:div?['bad','Divergência']:semPreco?['wa','Sem preço']:!cdm.length?['','Sem movimento']:['li','Em operação'];
+    rows.push({c,cu,cm,f,skus:prodsDe(c.id).length,last,steps,st,div,fx,parado:!cdm.length})}
   const maxm=Math.max(...rows.map(r=>r.cm),0.0001);
-  rows.sort((a,b)=>b.f.total-a.f.total);
-  const recent=S.doc.filter(d=>!S.fcli||d.cliente_id===S.fcli).slice(0,8);
+  const cnt={todos:rows.length,operacao:rows.filter(r=>r.st[1]==='Em operação').length,diverg:rows.filter(r=>r.div).length,fechado:rows.filter(r=>r.fx).length,parado:rows.filter(r=>r.parado).length};
+  let vis=rows.filter(r=>S.pf==='todos'||(S.pf==='operacao'&&r.st[1]==='Em operação')||(S.pf==='diverg'&&r.div)||(S.pf==='fechado'&&r.fx)||(S.pf==='parado'&&r.parado));
+  if(S.pq){const q=S.pq.toLowerCase();vis=vis.filter(r=>(r.c.nome+' '+(r.c.cnpj||'')+' '+(r.c.contato||'')).toLowerCase().includes(q))}
+  vis.sort((a,b)=>b.f.total-a.f.total);
   const al=alertas(scope);
-  return `<div class="grid g4 mb">
-   ${kpi('Unidades em estoque',fn(un),`${scope.length} cliente(s)`)}
-   ${kpi('m³ ocupado hoje',fn(m3,3)+' m³','soma de todos os SKUs')}
-   ${kpi('Saídas no mês',fn(ped),ymExt(ym))}
-   ${kpi('Faturamento previsto',brl(fat),'projeção até o fim do mês')}
+  const ticket=sai.length?sai.reduce((a,d)=>a+N(d.custo_total),0)/sai.length:0;
+  const taxaDev=uSai?uDev/uSai*100:0;
+  // modalidades / marketplaces / top skus
+  const mods={};sai.forEach(d=>{const k=d.modalidade||'normal';mods[k]=(mods[k]||0)+1});
+  const mk={};sai.forEach(d=>{const k=d.marketplace||'Sem marketplace';mk[k]=(mk[k]||0)+qtdDoc(d)});
+  const top={};sai.forEach(d=>(d.itens||[]).forEach(i=>top[i.p]=(top[i.p]||0)+N(i.q)));
+  const topA=Object.entries(top).sort((a,b)=>b[1]-a[1]).slice(0,6);
+  const nome=S.user&&S.user.email?S.user.email.split('@')[0]:'';
+  return `
+  <section class="hero card">
+    <div class="hero-txt">
+      <div class="kick">PREP CENTER · FULFILLMENT · 3PL</div>
+      <div class="hl">DO RECEBIMENTO<br><span>AO FECHAMENTO.</span></div>
+      <div class="rule"></div>
+      <div class="sub">${ext(hoje).replace(/^./,c=>c.toUpperCase())}${nome?' · olá, '+esc(nome):''}<br>Hoje: <b>${hj(ent).length}</b> entrada(s), <b>${hj(sai).length}</b> saída(s), <b>${hj(dev).length}</b> devolução(ões).</div>
+      <div class="row mt"><button class="btn" data-act="go" data-v="entrada">⇣ Nova entrada</button><button class="btn" data-act="go" data-v="saida">⇡ Nova saída</button><button class="btn g" data-act="go" data-v="devolucao">↺ Devolução</button></div>
+    </div>
+    <div class="hero-art">${heroArt()}</div>
+  </section>
+  <div class="stages">
+    ${stage('⇣','Entradas no mês',fn(uEnt),'un',`${ent.length} NF · hoje +${hj(ent).length}`,artIn())}
+    ${stage('▦','Em estoque',fn(un),'un',`${skus} SKUs · ${fn(m3,3)} m³`,artRack())}
+    ${stage('⇡','Saídas no mês',fn(sai.length),'pedidos',`${fn(uSai)} un · hoje +${hj(sai).length}`,artTruck())}
+    ${stage('↺','Devoluções',fn(uDev),'un',`taxa ${fn(taxaDev,1)}% das saídas`,artBack())}
   </div>
-  <div class="split">
-   <div>
-    <div class="row mb"><button class="btn" data-act="go" data-v="entrada">⇣ Nova entrada</button><button class="btn" data-act="go" data-v="saida">⇡ Nova saída</button><button class="btn g" data-act="go" data-v="devolucao">↺ Devolução</button></div>
-    <h2>Clientes <small>· ${ymExt(ym)}</small></h2>
-    <div class="tw"><table><thead><tr><th>Cliente</th><th class="n">SKUs</th><th class="n">Unid.</th><th>m³ ocupado</th><th class="n">Saídas</th><th class="n">Previsto</th></tr></thead><tbody>
-    ${rows.map(r=>`<tr class="click" data-act="fech" data-c="${r.c.id}"><td><b>${esc(r.c.nome)}</b></td><td class="n">${r.skus}</td><td class="n">${fn(r.cu)}</td><td><div class="row" style="gap:8px;flex-wrap:nowrap"><div class="bar" style="flex:1"><i style="width:${Math.round(r.cm/maxm*100)}%"></i></div><span class="nowrap sm">${fn(r.cm,3)}</span></div></td><td class="n">${r.f.pedidos}</td><td class="n"><b>${brl(r.f.total)}</b></td></tr>`).join('')}
-    </tbody></table></div>
+  <div class="dash">
+   <div class="dmain">
+    <div class="grid g4 mb">
+     ${kpi('Faturamento previsto',brl(fat),'projeção até o fim do mês')}
+     ${kpi('Ticket médio / saída',brl(ticket),`${sai.length} saídas no mês`)}
+     ${kpi('m³ médio no mês',fn(serie.length?serie.reduce((a,x)=>a+x.m3,0)/serie.length:0,3),'base da armazenagem')}
+     ${kpi('Clientes ativos',fn(scope.length),`${cnt.parado} sem movimento`)}
+    </div>
+    <div class="card pad mb">
+     <div class="row mb" style="align-items:center"><h2 style="margin:0;font-size:16px">Ciclo do mês por cliente</h2><span class="mu sm">${ymExt(ym)}</span>
+      <div class="right row" style="gap:8px"><label class="f" style="min-width:200px"><input data-f2="pq" value="${esc(S.pq)}" placeholder="Buscar cliente, CNPJ, contato…"></label><button class="btn" data-act="newcli">＋ Novo cliente</button></div></div>
+     <div class="pills mb">${[['todos','Todos'],['operacao','Em operação'],['diverg','Divergência'],['fechado','Fechados'],['parado','Sem movimento']].map(x=>`<button class="pill ${S.pf===x[0]?'on':''}" data-act="pf" data-m="${x[0]}">${x[1]} <b style="margin-left:5px">${cnt[x[0]]}</b></button>`).join('')}</div>
+     <div class="tw" style="border:0;background:transparent"><table class="jt"><thead><tr><th>Cliente</th><th>Etapas do mês</th><th>Último movimento</th><th>Ocupação</th><th class="n">Previsto</th></tr></thead><tbody>
+     ${vis.length?vis.map(r=>`<tr class="click" data-act="fech" data-c="${r.c.id}">
+       <td><div class="who"><span class="av" style="background:${avColor(r.c.nome)}">${esc(ini(r.c.nome))}</span><div><b>${esc(r.c.nome)}</b><div class="mu sm">${r.c.cnpj?esc(fmtCnpj(r.c.cnpj)):'sem CNPJ'}</div><span class="tag ${r.st[0]}">${r.st[1]}</span> <span class="mu sm">${r.skus} SKUs</span></div></div></td>
+       <td>${stepsHtml(r.steps)}</td>
+       <td class="nowrap">${r.last?`<b>${dshort(r.last.data)}</b> <span class="mu">${WD[new Date(r.last.data+'T12:00').getDay()].replace(' feira','')}</span><div class="mu sm">${TIPOS[r.last.tipo]} · ${qtdDoc(r.last)} un</div>`:'<span class="mu">—</span>'}</td>
+       <td style="min-width:104px"><div class="bar"><i style="width:${Math.round(r.cm/maxm*100)}%"></i></div><div class="mu sm">${fn(r.cm,3)} m³ · ${fn(r.cu)} un</div></td>
+       <td class="n"><b>${brl(r.f.total)}</b><div class="mu sm">${r.f.pedidos} saídas</div></td></tr>`).join(''):`<tr><td colspan="5" class="mu">Nenhum cliente neste filtro.</td></tr>`}
+     </tbody></table></div>
+    </div>
+    <div class="grid g2">
+     <div class="card pad"><h2>Ocupação do armazém <small>· m³ por dia, ${ymExt(ym)}</small></h2>${areaChart(serie)}</div>
+     <div class="card pad"><h2>Composição da receita prevista</h2>${stackBar([['Armazenagem',comp.arm,'#7B3FF2'],['Operação',comp.op,'#C4B0FF'],['Fretes',comp.fr,'#3DDC97'],['Fixos',comp.fx,'#FFC857']])}</div>
+     <div class="card pad"><h2>Top SKUs do mês <small>· unidades expedidas</small></h2>${hbars(topA.map(([p,q])=>[(prod(p)||{}).sku||'?',q,(prod(p)||{}).nome||'']),'un')}</div>
+     <div class="card pad"><h2>Saídas por modalidade</h2>${hbars(MODS.map(m=>[m[1],mods[m[0]]||0,'']).filter(x=>x[1]),'pedidos')}<h2 class="mt">Por marketplace <small>· unidades</small></h2>${hbars(Object.entries(mk).sort((a,b)=>b[1]-a[1]).map(([k,v])=>[k,v,'']),'un')}</div>
+    </div>
    </div>
-   <div class="grid" style="align-content:start">
-    <div class="card pad"><h2>Alertas</h2><div class="list">${al.length?al.map(a=>`<div class="it"><span class="dot" style="background:${a[0]}"></span><div>${a[1]}</div></div>`).join(''):'<div class="mu sm">Nenhum alerta. Tudo em ordem.</div>'}</div></div>
-    <div class="card pad"><h2>Atividade recente</h2><div class="list">${recent.length?recent.map(d=>`<div class="it"><span class="dot" style="background:${d.status==='cancelado'?'var(--bad)':d.tipo==='entrada'?'var(--ok)':d.tipo==='saida'?'var(--li)':'var(--wa)'}"></span><div><b>${TIPOS[d.tipo]}</b> · ${esc((cli(d.cliente_id)||{}).nome||'—')}<div class="mu sm">${dshort(d.data)} · ${qtdDoc(d)} un${d.ref?' · '+esc(d.ref):''}${d.status==='cancelado'?' · cancelado':''}</div></div></div>`).join(''):'<div class="mu sm">Sem movimentos ainda.</div>'}</div></div>
-   </div>
-  </div>`
-}
+   <aside class="dside">
+    <div class="card pad"><div class="row"><h2 style="margin:0">Hoje</h2><span class="mu sm">${ext(hoje)}</span><a href="#" class="right sm" data-act="hday" data-d="${hoje}">ver tudo ›</a></div>
+     <div class="tl mt">${hj(S.doc.filter(d=>ids.has(d.cliente_id))).slice(0,6).map(d=>`<div class="tli ${d.status==='cancelado'?'cx':''}"><span class="hh">${hhmm(d.created_at)}</span><span class="dot" style="background:${tcol(d)}"></span><div><b>${TIPOS[d.tipo]}</b> · ${esc((cli(d.cliente_id)||{}).nome||'')}<div class="mu sm">${qtdDoc(d)} un${d.ref?' · '+esc(d.ref):''}${d.tipo==='saida'?' · '+brl(d.custo_total):''}</div></div></div>`).join('')||'<div class="mu sm">Nenhum movimento hoje ainda.</div>'}</div></div>
+    <div class="card asst"><div class="kick">ASSISTENTE OPERACIONAL</div><div class="aname">ATLAS</div>
+     <div class="sm">${asstLines(rows,fat,al).map(l=>`<div class="al">• ${l}</div>`).join('')}</div>
+     <div class="row mt"><button class="pill on" data-act="copyday">Copiar resumo do dia</button><button class="pill" data-act="go" data-v="fechamento">Fechamentos</button></div>
+     <div class="aface">${asstArt()}</div></div>
+    <div class="card pad"><div class="row"><h2 style="margin:0">Alertas</h2><span class="tag ${al.length?'bad':'ok'} right">${al.length}</span></div><div class="list mt" id="alertlist">${al.length?al.map(a=>`<div class="it"><span class="dot" style="background:${a[0]}"></span><div>${a[1]}</div></div>`).join(''):'<div class="mu sm">Nenhum alerta. Tudo em ordem.</div>'}</div></div>
+    <div class="card pad"><h2>Calendário de movimentos</h2>${miniCal(ids)}</div>
+    <div class="card pad"><div class="row"><h2 style="margin:0">Atividade recente</h2><a href="#" class="right sm" data-act="go" data-v="historico">histórico ›</a></div><div class="list mt">${S.doc.filter(d=>ids.has(d.cliente_id)).slice(0,6).map(d=>`<div class="it"><span class="dot" style="background:${tcol(d)}"></span><div><b>${TIPOS[d.tipo]}</b> · ${esc((cli(d.cliente_id)||{}).nome||'—')}<div class="mu sm">${dshort(d.data)} · ${qtdDoc(d)} un${d.ref?' · '+esc(d.ref):''}${d.status==='cancelado'?' · cancelado':''}</div></div></div>`).join('')||'<div class="mu sm">Sem movimentos ainda.</div>'}</div></div>
+   </aside>
+  </div>`}
+const tcol=d=>d.status==='cancelado'?'var(--bad)':d.tipo==='entrada'?'var(--ok)':d.tipo==='saida'?'var(--li)':'var(--wa)';
+const hhmm=ts=>{if(!ts)return'';const d=new Date(ts);return isNaN(d)?'':String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')};
+const ini=n=>String(n||'?').replace(/\(.*?\)/g,'').trim().split(/\s+/).slice(0,2).map(w=>w[0]).join('').toUpperCase();
+const avColor=n=>{let h=0;for(const ch of String(n))h=(h*31+ch.charCodeAt(0))%360;return `hsl(${h},55%,38%)`};
+function stage(ic,t,v,u,s,art){return `<div class="stage card"><div class="st-h"><span class="st-ic">${ic}</span>${t}</div><div class="st-v">${v} <small>${u}</small></div><div class="st-s">${s}</div><div class="st-art">${art}</div></div>`}
+function stepsHtml(st){const cur=st.findIndex(s=>!s[1]);return `<div class="steps2">${st.map((s,i)=>`<div class="sp ${s[1]?'on':''} ${i===cur?'cur':''}"><i></i><span>${s[0]}</span></div>`).join('')}</div>`}
+function asstLines(rows,fat,al){const L=[];L.push(`Faturamento previsto do mês: <b>${brl(fat)}</b>`);
+  const big=[...rows].sort((a,b)=>b.cm-a.cm)[0];if(big&&big.cm)L.push(`Maior ocupação: <b>${esc(big.c.nome)}</b> (${fn(big.cm,3)} m³)`);
+  const minimo=rows.filter(r=>r.f.minimo);if(minimo.length)L.push(`${minimo.length} cliente(s) pagando pelo <b>mínimo contratado</b>`);
+  const par=rows.filter(r=>r.parado);if(par.length)L.push(`${par.length} cliente(s) <b>sem movimento</b> no mês`);
+  L.push(al.length?`<b>${al.length} alerta(s)</b> para resolver`:'Nenhum alerta pendente');return L}
+function resumoDia(){const hoje=today();const ds=S.doc.filter(d=>d.data===hoje&&d.status!=='cancelado'&&(!S.fcli||d.cliente_id===S.fcli));
+  const by=t=>ds.filter(d=>d.tipo===t);const s=by('saida');
+  return `*DOCA — resumo de ${ext(hoje)}*\n\nEntradas: ${by('entrada').length} (${by('entrada').reduce((a,d)=>a+qtdDoc(d),0)} un)\nSaídas: ${s.length} (${s.reduce((a,d)=>a+qtdDoc(d),0)} un) · ${brl(s.reduce((a,d)=>a+N(d.custo_total),0))}\nDevoluções: ${by('devolucao').length}\n\n`+act(S.cli).filter(c=>!S.fcli||c.id===S.fcli).map(c=>{const n=ds.filter(d=>d.cliente_id===c.id);return n.length?`• ${c.nome}: ${n.filter(d=>d.tipo==='saida').length} saída(s), ${n.filter(d=>d.tipo==='entrada').length} entrada(s)`:''}).filter(Boolean).join('\n')}
+function miniCal(ids){const days=new Set(S.doc.filter(d=>ids.has(d.cliente_id)&&d.status!=='cancelado').map(d=>String(d.data).slice(0,10)));
+  const cur=ymNow();const pd=new Date(cur+'-15T12:00');pd.setMonth(pd.getMonth()-1);const prev=pd.toISOString().slice(0,7);
+  const one=ym=>{const first=new Date(ym+'-01T12:00').getDay();const n=daysIn(ym);let h=`<div class="cal"><div class="cal-t">${MES[+ym.slice(5,7)-1]} ${ym.slice(0,4)}</div><div class="cal-g">${['D','S','T','Q','Q','S','S'].map(x=>`<span class="cw">${x}</span>`).join('')}`;
+    for(let i=0;i<first;i++)h+='<span></span>';
+    for(let i=1;i<=n;i++){const d=`${ym}-${String(i).padStart(2,'0')}`;h+=`<span class="cd ${d===today()?'td':''} ${days.has(d)?'has':''}" ${days.has(d)?`data-act="hday" data-d="${d}"`:''}>${i}</span>`}
+    return h+'</div></div>'};
+  return `<div class="cals">${one(prev)}${one(cur)}</div>`}
+function areaChart(s){if(!s.length)return'<div class="mu sm">Sem dados.</div>';const W=520,H=150,p=28;const mx=Math.max(...s.map(x=>x.m3),0.001);const X=i=>p+i*(W-p-8)/Math.max(s.length-1,1),Y=v=>H-20-(v/mx)*(H-40);
+  const real=s.filter(x=>!x.fut);const line=pts=>pts.map((x,i)=>`${i?'L':'M'}${X(s.indexOf(x)).toFixed(1)} ${Y(x.m3).toFixed(1)}`).join('');
+  const area=real.length?line(real)+`L${X(real.length-1).toFixed(1)} ${H-20}L${X(0)} ${H-20}Z`:'';
+  const fut=s.filter(x=>x.fut);const futL=fut.length&&real.length?line([real[real.length-1],...fut]):'';
+  const ticks=[0,mx/2,mx];
+  return `<svg viewBox="0 0 ${W} ${H}" class="chart" role="img" aria-label="m³ por dia"><defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7B3FF2" stop-opacity=".55"/><stop offset="1" stop-color="#7B3FF2" stop-opacity="0"/></linearGradient></defs>
+   ${ticks.map(t=>`<line x1="${p}" x2="${W-8}" y1="${Y(t)}" y2="${Y(t)}" stroke="#2B2556"/><text x="${p-4}" y="${Y(t)+3}" text-anchor="end" font-size="9" fill="#A8A2CF">${fn(t,2)}</text>`).join('')}
+   <path d="${area}" fill="url(#ag)"/>${real.length?`<path d="${line(real)}" fill="none" stroke="#C4B0FF" stroke-width="2"/>`:''}${futL?`<path d="${futL}" fill="none" stroke="#C4B0FF" stroke-width="1.5" stroke-dasharray="4 4" opacity=".6"/>`:''}
+   ${[0,Math.floor(s.length/2),s.length-1].map(i=>`<text x="${X(i)}" y="${H-5}" text-anchor="middle" font-size="9" fill="#A8A2CF">${dshort(s[i].d)}</text>`).join('')}
+   ${real.length?`<circle cx="${X(real.length-1)}" cy="${Y(real[real.length-1].m3)}" r="4" fill="#C4B0FF"/><text x="${Math.min(X(real.length-1)+6,W-60)}" y="${Y(real[real.length-1].m3)-8}" font-size="10" fill="#F5F3FF" font-weight="600">${fn(real[real.length-1].m3,3)} m³ hoje</text>`:''}</svg>
+   <div class="mu sm">Linha tracejada = projeção mantendo o estoque de hoje.</div>`}
+function stackBar(parts){const tot=parts.reduce((a,p)=>a+p[1],0);if(!tot)return'<div class="mu sm">Sem valores ainda. Defina a tabela de preços dos clientes.</div>';
+  return `<div class="sbar">${parts.filter(p=>p[1]>0).map(p=>`<i style="width:${p[1]/tot*100}%;background:${p[2]}" title="${p[0]}"></i>`).join('')}</div>
+  <div class="leg">${parts.map(p=>`<div class="lg"><span class="sw" style="background:${p[2]}"></span><span>${p[0]}</span><b>${brl(p[1])}</b><span class="mu">${fn(p[1]/tot*100,0)}%</span></div>`).join('')}</div>
+  <div class="sum big"><span>Total previsto</span><span>${brl(tot)}</span></div>`}
+function hbars(a,u){if(!a.length)return'<div class="mu sm">Sem saídas no mês.</div>';const mx=Math.max(...a.map(x=>x[1]),1);
+  return `<div class="hb">${a.map(x=>`<div class="hbr"><div class="hbl"><b>${esc(x[0])}</b>${x[2]?` <span class="mu">${esc(x[2])}</span>`:''}</div><div class="bar"><i style="width:${x[1]/mx*100}%"></i></div><div class="hbv">${fn(x[1])} <span class="mu">${u}</span></div></div>`).join('')}</div>`}
+/* ilustrações */
+function heroArt(){return `<svg viewBox="0 0 640 300" preserveAspectRatio="xMidYMid slice" class="hsvg" aria-hidden="true">
+ <defs><linearGradient id="hs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a1a6e"/><stop offset="1" stop-color="#0c0a24"/></linearGradient>
+ <radialGradient id="hl" cx=".7" cy=".1" r=".7"><stop offset="0" stop-color="#C4B0FF" stop-opacity=".55"/><stop offset="1" stop-color="#C4B0FF" stop-opacity="0"/></radialGradient>
+ <linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9b6bff"/><stop offset="1" stop-color="#5b2bd0"/></linearGradient>
+ <linearGradient id="bx2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2d7a"/><stop offset="1" stop-color="#231a55"/></linearGradient>
+ <linearGradient id="fl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b1546"/><stop offset="1" stop-color="#07061A"/></linearGradient></defs>
+ <rect width="640" height="300" fill="url(#hs)"/><rect width="640" height="300" fill="url(#hl)"/>
+ ${[0,1,2,3,4].map(i=>`<rect x="${40+i*120}" y="40" width="10" height="210" fill="#1d1650"/><rect x="${150+i*120}" y="40" width="10" height="210" fill="#1d1650"/>`).join('')}
+ ${[0,1,2,3].map(r=>`<rect x="30" y="${90+r*52}" width="620" height="6" fill="#2b2270"/>`).join('')}
+ ${(()=>{let s='';const seed=[3,1,4,1,5,9,2,6,5,3,5,8,9,7,9,3,2,3,8,4];let k=0;for(let r=0;r<4;r++)for(let c=0;c<5;c++){const n=seed[k++%seed.length]%3+1;for(let j=0;j<n;j++){const w=26+((k+j)%3)*6,h=22+((k*j)%3)*6;const x=56+c*120+j*30,y=90+r*52-h;s+=`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="2" fill="url(#bx2)" stroke="#4a3aa0" stroke-width=".8"/><line x1="${x+w/2}" y1="${y}" x2="${x+w/2}" y2="${y+h*.4}" stroke="#6a58c8" stroke-width=".8"/>`}}return s})()}
+ <rect x="0" y="250" width="640" height="50" fill="url(#fl)"/>
+ <g transform="translate(400,170)"><rect x="0" y="62" width="150" height="10" rx="2" fill="#C4B0FF"/><rect x="8" y="72" width="14" height="8" fill="#C4B0FF"/><rect x="68" y="72" width="14" height="8" fill="#C4B0FF"/><rect x="128" y="72" width="14" height="8" fill="#C4B0FF"/>
+  <rect x="4" y="22" width="68" height="40" rx="3" fill="url(#bx)" stroke="#EDE7FF" stroke-width="1.2"/><rect x="76" y="22" width="68" height="40" rx="3" fill="url(#bx)" stroke="#EDE7FF" stroke-width="1.2"/><rect x="38" y="-18" width="70" height="40" rx="3" fill="url(#bx)" stroke="#EDE7FF" stroke-width="1.2"/>
+  <line x1="38" y1="22" x2="38" y2="36" stroke="#EDE7FF"/><line x1="110" y1="22" x2="110" y2="36" stroke="#EDE7FF"/><line x1="73" y1="-18" x2="73" y2="-4" stroke="#EDE7FF"/>
+  <rect x="12" y="44" width="22" height="10" rx="1" fill="#EDE7FF" opacity=".85"/><rect x="84" y="44" width="22" height="10" rx="1" fill="#EDE7FF" opacity=".85"/></g>
+ </svg>`}
+function artIn(){return `<svg viewBox="0 0 80 60"><rect x="18" y="22" width="44" height="32" rx="3" fill="none" stroke="#C4B0FF" stroke-width="2"/><path d="M40 4v26M30 20l10 10 10-10" fill="none" stroke="#C4B0FF" stroke-width="2.5"/></svg>`}
+function artRack(){return `<svg viewBox="0 0 80 60"><path d="M10 6v50M70 6v50M10 22h60M10 40h60M10 56h60" stroke="#C4B0FF" stroke-width="2" fill="none"/><rect x="16" y="10" width="14" height="12" fill="#7B3FF2"/><rect x="34" y="12" width="12" height="10" fill="#7B3FF2"/><rect x="18" y="28" width="16" height="12" fill="#7B3FF2"/><rect x="48" y="44" width="16" height="12" fill="#7B3FF2"/></svg>`}
+function artTruck(){return `<svg viewBox="0 0 80 60"><rect x="4" y="16" width="44" height="28" rx="2" fill="none" stroke="#C4B0FF" stroke-width="2"/><path d="M48 24h14l10 10v10H48z" fill="none" stroke="#C4B0FF" stroke-width="2"/><circle cx="18" cy="48" r="5" fill="#7B3FF2"/><circle cx="60" cy="48" r="5" fill="#7B3FF2"/></svg>`}
+function artBack(){return `<svg viewBox="0 0 80 60"><path d="M60 30a20 20 0 1 1-6-14" fill="none" stroke="#C4B0FF" stroke-width="2.5"/><path d="M56 4v14H42" fill="none" stroke="#C4B0FF" stroke-width="2.5"/></svg>`}
+function asstArt(){return `<svg viewBox="0 0 120 140" aria-hidden="true"><circle cx="70" cy="56" r="40" fill="none" stroke="#EDE7FF" stroke-opacity=".35" stroke-width="2"/><rect x="48" y="40" width="44" height="30" rx="10" fill="#EDE7FF" fill-opacity=".14" stroke="#EDE7FF" stroke-opacity=".4"/><circle cx="62" cy="55" r="4" fill="#EDE7FF"/><circle cx="80" cy="55" r="4" fill="#EDE7FF"/><path d="M70 16v-8" stroke="#EDE7FF" stroke-opacity=".5" stroke-width="2"/><circle cx="70" cy="6" r="3" fill="#EDE7FF" fill-opacity=".6"/><path d="M34 140c4-30 18-44 36-44s32 14 36 44" fill="#EDE7FF" fill-opacity=".1"/></svg>`}
+
 const kpi=(l,v,s)=>`<div class="card kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${s}</div></div>`;
 const qtdDoc=d=>(d.itens||[]).reduce((a,i)=>a+N(d.tipo==='entrada'?i.contado:i.q),0);
 function alertas(cs){const a=[];const ids=new Set(cs.map(c=>c.id));
@@ -416,7 +620,7 @@ function blankItem(tipo){return{k:uid(),p:'',cod:'',q:'',esperado:'',contado:'',
 function vDoc(){
   const f=S.form;if(!f)newForm(S.view);const F=S.form;const t=F.tipo;
   const c=cli(F.cliente_id);
-  let h=`<div class="card pad" style="max-width:980px">`;
+  let h=`<div class="dash"><div class="dmain"><div class="card pad">`;
   if(F.id)h+=`<div class="banner info">Editando ${TIPOS[t].toLowerCase()} de ${dshort(F.data)}. <button class="btn g s" data-act="cancelform">Descartar edição</button></div>`;
   h+=`<div class="fgrid">
     <label class="f w2">Cliente${cliSelect(F.cliente_id)}</label>
@@ -450,7 +654,23 @@ function vDoc(){
   h+=`<div class="fgrid mt"><label class="f w2">Observações<input data-f="obs" value="${esc(F.obs)}"></label></div>
    <div id="ferr" class="sm err mt" hidden></div>
    <div class="row mt"><button class="btn" data-act="savedoc">${F.id?'Salvar alterações':'Salvar '+TIPOS[t].toLowerCase()}</button>${F.id?'<button class="btn g" data-act="cancelform">Fechar</button>':''}</div>
-  </div>`;
+  </div></div><aside class="dside">${docSide(F)}</aside></div>`;
+  return h}
+function docSide(F){const c=cli(F.cliente_id);const hoje=today();
+  const dh=S.doc.filter(d=>d.data===hoje&&d.tipo===F.tipo&&d.status!=='cancelado'&&(!F.cliente_id||d.cliente_id===F.cliente_id));
+  let h=`<div class="card pad"><h2>${TIPOS[F.tipo]}s de hoje <small>· ${dh.length}</small></h2><div class="list">${dh.slice(0,6).map(d=>`<div class="it"><span class="dot" style="background:${tcol(d)}"></span><div><b>${esc((cli(d.cliente_id)||{}).nome||'')}</b><div class="mu sm">${hhmm(d.created_at)} · ${qtdDoc(d)} un${d.ref?' · '+esc(d.ref):''}${d.tipo==='saida'?' · '+brl(d.custo_total):''}</div></div></div>`).join('')||'<div class="mu sm">Nenhuma ainda hoje.</div>'}</div></div>`;
+  if(!c)return h+`<div class="card pad"><h2>Dica</h2><div class="mu sm">Digite o CNPJ ou escolha o cliente para ver o estoque e a tabela de preços dele aqui.</div></div>`;
+  const ps=prodsDe(c.id).map(p=>({p,s:saldo(p.id)})).sort((a,b)=>b.s.disp-a.s.disp);
+  h+=`<div class="card pad"><div class="row"><h2 style="margin:0">Estoque · ${esc(c.nome)}</h2></div><div class="hb mt">${ps.slice(0,8).map(x=>`<div class="hbr"><div class="hbl"><b>${esc(x.p.sku)}</b> <span class="mu">${esc(x.p.nome||'')}</span></div><div class="bar"><i style="width:${ps[0]&&ps[0].s.disp?x.s.disp/ps[0].s.disp*100:0}%"></i></div><div class="hbv">${fn(x.s.disp)}${x.s.av?` <span class="err">+${x.s.av}</span>`:''}</div></div>`).join('')||'<div class="mu sm">Sem produtos.</div>'}</div></div>`;
+  h+=`<div class="card pad"><h2>Tabela de preços</h2>
+   <div class="sum"><span>Venda normal</span><b>${c.tipo_preco==='unidade'?brl(c.prep_unidade)+'/un':brl(c.prep_pedido)+'/pedido'}</b></div>
+   <div class="sum"><span>Full</span><b>${brl(c.full_unidade)}/un + ${brl(c.remessa_dia)}/dia</b></div>
+   <div class="sum"><span>Motoboy</span><b>${brl(c.motoboy)}</b></div>
+   <div class="sum"><span>Armazenagem</span><b>${brl(c.valor_m3)}/m³${c.modalidade_m3==='minimo'?' · mín. '+fn(c.m3_minimo,2):''}</b></div>
+   ${(c.servicos||[]).map(s=>`<div class="sum"><span>${esc(s.nome)}</span><b>${brl(s.valor)}/${s.base}</b></div>`).join('')}
+   <a href="#" class="sm" data-act="go" data-v="clientes">editar tabela ›</a></div>`;
+  const f=fatura(c.id,ymNow());
+  h+=`<div class="card pad"><h2>Mês de ${esc(c.nome)}</h2><div class="sum"><span>Saídas</span><b>${f.pedidos}</b></div><div class="sum"><span>Unidades expedidas</span><b>${fn(f.unid)}</b></div><div class="sum big"><span>Previsto</span><span>${brl(f.total)}</span></div></div>`;
   return h}
 function cliSelect(v){const ac=act(S.cli).sort((a,b)=>a.nome.localeCompare(b.nome));
   return `<select data-f="cliente_id"><option value="">Escolha…</option>${ac.map(c=>`<option value="${c.id}" ${v===c.id?'selected':''}>${esc(c.nome)}</option>`).join('')}<option value="__new">＋ Cadastrar novo cliente…</option></select>`}
@@ -540,7 +760,9 @@ function vEstoque(){
   const ps=S.prod.filter(p=>p.status!=='inativo'&&(!S.fcli||p.cliente_id===S.fcli)&&(!S.q||(p.sku+' '+(p.nome||'')+' '+(p.ean||'')).toLowerCase().includes(S.q.toLowerCase())));
   const rows=ps.map(p=>({p,s:saldo(p.id,ate)})).sort((a,b)=>b.s.tot-a.s.tot);
   let td=0,ta=0,tm=0;rows.forEach(r=>{td+=r.s.disp;ta+=r.s.av;tm+=r.s.tot*m3u(r.p)});
-  return `<div class="row mb"><label class="f" style="flex:1;min-width:180px">Buscar<input data-f2="q" value="${esc(S.q)}" placeholder="SKU, nome ou EAN"></label><label class="f">Posição em<input type="date" data-f2="ate" value="${ate}"></label><button class="btn g s" data-act="csvest" style="align-self:flex-end">Exportar CSV</button></div>
+  const allP=S.prod.filter(p=>p.status!=='inativo'&&(!S.fcli||p.cliente_id===S.fcli));let kd=0,ka=0,km=0,kz=0;allP.forEach(p=>{const s=saldo(p.id,ate);kd+=s.disp;ka+=s.av;km+=s.tot*m3u(p);if(!s.tot)kz++});
+  return `<div class="kstrip">${kpi('SKUs ativos',fn(allP.length),`${kz} zerado(s)`)}${kpi('Disponível',fn(kd)+' un','livre para expedir')}${kpi('Em avaria',fn(ka)+' un','quarentena')}${kpi('Volume ocupado',fn(km,3)+' m³',ate===today()?'hoje':'em '+dshort(ate))}</div>
+  <div class="row mb"><label class="f" style="flex:1;min-width:180px">Buscar<input data-f2="q" value="${esc(S.q)}" placeholder="SKU, nome ou EAN"></label><label class="f">Posição em<input type="date" data-f2="ate" value="${ate}"></label><button class="btn g s" data-act="csvest" style="align-self:flex-end">Exportar CSV</button></div>
   <div class="tw"><table><thead><tr><th>SKU</th><th>Produto</th>${S.fcli?'':'<th>Cliente</th>'}<th class="n">Disponível</th><th class="n">Avaria</th><th class="n">Total</th><th class="n">m³</th><th></th></tr></thead><tbody>
   ${rows.length?rows.map(r=>`<tr><td><b>${esc(r.p.sku)}</b></td><td>${esc(r.p.nome||'')}${!m3u(r.p)?' <span class="tag wa">sem medidas</span>':''}</td>${S.fcli?'':`<td class="mu">${esc((cli(r.p.cliente_id)||{}).nome||'')}</td>`}<td class="n">${fn(r.s.disp)}</td><td class="n ${r.s.av?'err':''}">${fn(r.s.av)}</td><td class="n"><b>${fn(r.s.tot)}</b></td><td class="n">${fn(r.s.tot*m3u(r.p),4)}</td><td class="n"><button class="btn g s" data-act="ajuste" data-p="${r.p.id}">Ajustar</button></td></tr>
    ${S.open===r.p.id?`<tr><td colspan="8"><div class="box mini"><b>Ajuste de inventário · ${esc(r.p.sku)}</b><div class="fgrid mt"><label class="f">Contagem real disponível<input id="aj_disp" type="number" value="${r.s.disp}"></label><label class="f">Contagem real em avaria<input id="aj_av" type="number" value="${r.s.av}"></label><label class="f w2">Motivo<input id="aj_mot" placeholder="ex.: inventário mensal, descarte de avaria"></label></div><div id="aj_err" class="sm err" hidden></div><div class="row mt"><button class="btn s" data-act="saveaj" data-p="${r.p.id}">Salvar ajuste</button><button class="btn g s" data-act="ajuste" data-p="">Fechar</button></div></div></td></tr>`:''}`).join(''):`<tr><td colspan="8" class="mu">Nenhum produto${S.q?' encontrado':''}. <a href="#" data-act="go" data-v="produtos">Cadastrar produtos</a></td></tr>`}
@@ -560,7 +782,9 @@ function vProdutos(){
   if(S.paste&&S.paste.kind==='prod')return vPaste();
   const ps=S.prod.filter(p=>(!S.fcli||p.cliente_id===S.fcli)&&(!S.q||(p.sku+' '+(p.nome||'')+' '+(p.ean||'')).toLowerCase().includes(S.q.toLowerCase())));
   ps.sort((a,b)=>(a.status==='inativo')-(b.status==='inativo')||a.sku.localeCompare(b.sku));
-  let h=`<div class="row mb"><label class="f" style="flex:1;min-width:180px">Buscar<input data-f2="q" value="${esc(S.q)}" placeholder="SKU, nome ou EAN"></label><button class="btn" data-act="newprod" style="align-self:flex-end">＋ Novo produto</button><button class="btn g" data-act="paste" data-k="prod" style="align-self:flex-end">Colar lista</button></div>`;
+  const pa=S.prod.filter(p=>!S.fcli||p.cliente_id===S.fcli);
+  let h=`<div class="kstrip">${kpi('Produtos',fn(pa.filter(p=>p.status!=='inativo').length),`${fn(pa.filter(p=>p.status==='inativo').length)} inativo(s)`)}${kpi('Sem medidas',fn(pa.filter(p=>p.status!=='inativo'&&!m3u(p)).length),'fora do cálculo de m³')}${kpi('Sem EAN',fn(pa.filter(p=>p.status!=='inativo'&&!p.ean).length),'não bipa na entrada')}${kpi('Clientes com produtos',fn(new Set(pa.map(p=>p.cliente_id)).size),'')}</div>
+  <div class="row mb"><label class="f" style="flex:1;min-width:180px">Buscar<input data-f2="q" value="${esc(S.q)}" placeholder="SKU, nome ou EAN"></label><button class="btn" data-act="newprod" style="align-self:flex-end">＋ Novo produto</button><button class="btn g" data-act="paste" data-k="prod" style="align-self:flex-end">Colar lista</button></div>`;
   if(S.edit&&S.edit.kind==='prod'&&!S.edit.id)h+=prodForm(S.edit);
   h+=`<div class="tw"><table><thead><tr><th>SKU</th><th>Nome</th>${S.fcli?'':'<th>Cliente</th>'}<th>EAN</th><th>A × L × P (cm)</th><th class="n">m³ un.</th><th class="n">Disp.</th><th></th></tr></thead><tbody>
   ${ps.length?ps.map(p=>`<tr class="click" data-act="editprod" data-id="${p.id}"><td><b>${esc(p.sku)}</b></td><td>${esc(p.nome||'')}</td>${S.fcli?'':`<td class="mu">${esc((cli(p.cliente_id)||{}).nome||'')}</td>`}<td class="mu">${esc(p.ean||'')}</td><td>${m3u(p)?`${fn(p.alt_cm,1)} × ${fn(p.larg_cm,1)} × ${fn(p.prof_cm,1)}`:'<span class="tag wa">faltam medidas</span>'}</td><td class="n">${fn(m3u(p),5)}</td><td class="n">${fn(saldo(p.id).disp)}</td><td>${p.status==='inativo'?'<span class="tag bad">inativo</span>':''}</td></tr>${S.edit&&S.edit.id===p.id?`<tr><td colspan="8">${prodForm(S.edit)}</td></tr>`:''}`).join(''):`<tr><td colspan="8" class="mu">Nenhum produto. Cadastre um ou cole a lista da planilha.</td></tr>`}
@@ -592,7 +816,9 @@ async function saveProd(){
 function vClientes(){
   if(S.paste&&S.paste.kind==='cli')return vPaste();
   const cs=[...S.cli].sort((a,b)=>(a.status==='inativo')-(b.status==='inativo')||a.nome.localeCompare(b.nome));
-  let h=`<div class="row mb"><button class="btn" data-act="newcli">＋ Novo cliente</button><button class="btn g" data-act="paste" data-k="cli">Colar lista</button><span class="mu sm">Cada cliente tem a própria tabela de preços.</span></div>`;
+  const ac2=act(S.cli);const prev2=ac2.reduce((a,c)=>a+fatura(c.id,ymNow()).total,0);
+  let h=`<div class="kstrip">${kpi('Clientes ativos',fn(ac2.length),`${fn(S.cli.length-ac2.length)} inativo(s)`)}${kpi('Previsto no mês',brl(prev2),ymExt(ymNow()))}${kpi('Média por cliente',brl(ac2.length?prev2/ac2.length:0),'faturamento previsto')}${kpi('Com mínimo de m³',fn(ac2.filter(c=>c.modalidade_m3==='minimo').length),'franquia contratada')}</div>
+  <div class="row mb"><button class="btn" data-act="newcli">＋ Novo cliente</button><button class="btn g" data-act="paste" data-k="cli">Colar lista</button><span class="mu sm">Cada cliente tem a própria tabela de preços.</span></div>`;
   if(S.edit&&S.edit.kind==='cli'&&!S.edit.id)h+=cliForm(S.edit);
   h+=`<div class="tw"><table><thead><tr><th>Cliente</th><th>CNPJ</th><th>Venda normal</th><th>Full</th><th>Armazenagem</th><th class="n">SKUs</th><th></th></tr></thead><tbody>
   ${cs.length?cs.map(c=>`<tr class="click" data-act="editcli" data-id="${c.id}"><td><b>${esc(c.nome)}</b><div class="mu sm">${esc(c.contato||'')} ${esc(c.telefone||'')}</div></td><td class="mu nowrap">${esc(fmtCnpj(c.cnpj))}</td><td class="nowrap">${c.tipo_preco==='unidade'?brl(c.prep_unidade)+'/un':brl(c.prep_pedido)+'/pedido'}</td><td class="nowrap">${brl(c.full_unidade)}/un<div class="mu sm">+ ${brl(c.remessa_dia)}/dia</div></td><td class="nowrap">${brl(c.valor_m3)}/m³<div class="mu sm">${c.modalidade_m3==='minimo'?'mín. '+fn(c.m3_minimo,2)+' m³':'média diária'}</div></td><td class="n">${prodsDe(c.id).length}</td><td>${c.status==='inativo'?'<span class="tag bad">inativo</span>':''}</td></tr>${S.edit&&S.edit.id===c.id?`<tr><td colspan="7">${cliForm(S.edit)}</td></tr>`:''}`).join(''):`<tr><td colspan="7" class="mu">Nenhum cliente ainda.</td></tr>`}
@@ -696,15 +922,18 @@ async function reabrir(id){try{const r=await upd(T.fech,id,{status:'reaberto',ca
 
 /* ---------- HISTÓRICO ---------- */
 function vHist(){
-  let ds=S.doc.filter(d=>(!S.fcli||d.cliente_id===S.fcli)&&(S.hf==='todos'||(S.hf==='cancelados'?d.status==='cancelado':d.status!=='cancelado'))&&(!S.ht||d.tipo===S.ht));
+  let ds=S.doc.filter(d=>(!S.hd||String(d.data).slice(0,10)===S.hd)&&(!S.fcli||d.cliente_id===S.fcli)&&(S.hf==='todos'||(S.hf==='cancelados'?d.status==='cancelado':d.status!=='cancelado'))&&(!S.ht||d.tipo===S.ht));
   if(S.q){const q=S.q.toLowerCase();ds=ds.filter(d=>((d.ref||'')+' '+((cli(d.cliente_id)||{}).nome||'')+' '+(d.destinatario||'')+' '+(d.itens||[]).map(i=>(prod(i.p)||{}).sku).join(' ')).toLowerCase().includes(q))}
   ds=[...ds].sort((a,b)=>a.data<b.data?1:a.data>b.data?-1:(a.created_at<b.created_at?1:-1));
-  return `<div class="row mb"><div class="pills">${[['todos','Todos'],['ativos','Ativos'],['cancelados','Cancelados']].map(x=>`<button class="pill ${S.hf===x[0]?'on':''}" data-act="hf" data-m="${x[0]}">${x[1]}</button>`).join('')}</div><div class="pills">${[['','Todos os tipos'],['entrada','Entradas'],['saida','Saídas'],['devolucao','Devoluções'],['ajuste','Ajustes']].map(x=>`<button class="pill ${S.ht===x[0]?'on':''}" data-act="ht" data-m="${x[0]}">${x[1]}</button>`).join('')}</div></div>
+  const hm=S.doc.filter(d=>d.status!=='cancelado'&&String(d.data).slice(0,7)===ymNow()&&(!S.fcli||d.cliente_id===S.fcli));
+  return `<div class="kstrip">${kpi('Lançamentos no mês',fn(hm.length),ymExt(ymNow()))}${kpi('Entradas',fn(hm.filter(d=>d.tipo==='entrada').length),fn(hm.filter(d=>d.tipo==='entrada').reduce((a,d)=>a+qtdDoc(d),0))+' un')}${kpi('Saídas',fn(hm.filter(d=>d.tipo==='saida').length),brl(hm.filter(d=>d.tipo==='saida').reduce((a,d)=>a+N(d.custo_total),0)))}${kpi('Cancelados',fn(S.doc.filter(d=>d.status==='cancelado'&&(!S.fcli||d.cliente_id===S.fcli)).length),'todos os meses')}</div>
+  ${S.hd?`<div class="row mb"><span class="tag li">Dia ${ext(S.hd)}</span><button class="btn g s" data-act="hdclr">✕ Limpar dia</button></div>`:''}
+  <div class="row mb"><div class="pills">${[['todos','Todos'],['ativos','Ativos'],['cancelados','Cancelados']].map(x=>`<button class="pill ${S.hf===x[0]?'on':''}" data-act="hf" data-m="${x[0]}">${x[1]}</button>`).join('')}</div><div class="pills">${[['','Todos os tipos'],['entrada','Entradas'],['saida','Saídas'],['devolucao','Devoluções'],['ajuste','Ajustes']].map(x=>`<button class="pill ${S.ht===x[0]?'on':''}" data-act="ht" data-m="${x[0]}">${x[1]}</button>`).join('')}</div></div>
   <div class="row mb"><label class="f" style="flex:1"><input data-f2="q" value="${esc(S.q)}" placeholder="Buscar por pedido, NF, cliente, SKU…"></label><button class="btn g s" data-act="csvhist">Exportar CSV</button></div>
   <div class="tw"><table><thead><tr><th>Data</th><th>Tipo</th><th>Cliente</th><th>Ref.</th><th class="n">Un</th><th class="n">Valor</th><th></th></tr></thead><tbody>
   ${ds.length?ds.slice(0,300).map(d=>`<tr class="click" data-act="hopen" data-id="${d.id}" ${d.status==='cancelado'?'style="opacity:.55"':''}><td class="nowrap">${dshort(d.data)}</td><td>${TIPOS[d.tipo]}${d.tipo==='saida'&&d.modalidade?` <span class="mu sm">${(MODS.find(m=>m[0]===d.modalidade)||['',''])[1]}</span>`:''}${d.divergencia?' <span class="tag bad">diverg.</span>':''}</td><td>${esc((cli(d.cliente_id)||{}).nome||'—')}</td><td class="mu">${esc(d.ref||'')}</td><td class="n">${fn(qtdDoc(d))}</td><td class="n">${d.tipo==='saida'?brl(d.custo_total):''}</td><td>${d.status==='cancelado'?'<span class="tag bad">cancelado</span>':''}</td></tr>${S.open===d.id?`<tr><td colspan="7">${docDetail(d)}</td></tr>`:''}`).join(''):`<tr><td colspan="7" class="mu">Nada encontrado.</td></tr>`}
   </tbody></table></div>
-  <div class="foot mu">Conectado como <b>${esc(S.user&&S.user.email)}</b> · <a href="#" data-act="backup">Copiar backup</a> · <a href="#" data-act="logout">Sair desta conta</a></div>`}
+  <div class="foot mu">DOCA v2.0 · Conectado como <b>${esc(S.user&&S.user.email)}</b> · <a href="#" data-act="backup">Copiar backup</a> · <a href="#" data-act="logout">Sair desta conta</a></div>`}
 function docDetail(d){return `<div class="box"><div class="grid g2"><div>
   <div class="sm"><b>${TIPOS[d.tipo]}</b> de ${ext(d.data)}${d.ref?` · ${esc(d.ref)}`:''}</div>
   ${d.marketplace?`<div class="sm mu">${esc(d.marketplace)}${d.destinatario?' · '+esc(d.destinatario):''}</div>`:''}
@@ -751,6 +980,7 @@ async function seed(){
 /* ---------- eventos ---------- */
 const armed=new Map();
 document.addEventListener('click',async ev=>{
+  if(!ev.target.closest('.gs'))$('#gres').hidden=true;
   const a=ev.target.closest('[data-act]');if(!a)return;
   const k=a.dataset.act;
   if(a.tagName==='A'||a.tagName==='BUTTON')ev.preventDefault();
@@ -758,6 +988,15 @@ document.addEventListener('click',async ev=>{
   const F=S.form;
   switch(k){
     case'go':return go(a.dataset.v);
+    case'pf':S.pf=a.dataset.m;return render();
+    case'hday':go('historico');S.hd=a.dataset.d;S.hf='todos';return render();
+    case'hdclr':S.hd='';return render();
+    case'copyday':{try{await navigator.clipboard.writeText(resumoDia());toast('Resumo do dia copiado · cole no WhatsApp')}catch(e){toast('Não consegui copiar',true)}return}
+    case'bell':{if(S.view!=='painel')go('painel');const el=$('#alertlist');if(el)el.scrollIntoView({behavior:'smooth',block:'center'});return}
+    case'gpick':{$('#gres').hidden=true;$('#gsearch').value='';const k2=a.dataset.k,id=a.dataset.id;
+      if(k2==='cli'){go('clientes');const c=cli(id);S.edit={kind:'cli',...c,servicos:JSON.parse(JSON.stringify(c.servicos||[]))};return render()}
+      if(k2==='prod'){go('estoque');S.q=(prod(id)||{}).sku||'';return render()}
+      if(k2==='doc'){go('historico');S.open=id;return render()}return}
     case'more':$('#sheet').hidden=false;return;
     case'mod':F.modalidade=a.dataset.m;{const c=cli(F.cliente_id);if(F.modalidade==='motoboy'&&c&&!N(F.frete)&&N(c.motoboy))F.frete=String(c.motoboy);if(F.modalidade==='full'&&!F.marketplace)F.marketplace='Mercado Livre'}return render();
     case'mkt':F.marketplace=F.marketplace===a.dataset.m?'':a.dataset.m;return render();
@@ -824,6 +1063,8 @@ document.addEventListener('input',ev=>{
     return refreshDocBits()}
   if(el.dataset.sv!==undefined&&S.edit){S.edit.servicos[+el.dataset.sv][el.dataset.k]=el.value;const sb2=$('#simbox');if(sb2){readCliForm();sb2.innerHTML=simTxt(S.edit)}return}
   if(el.id&&el.id.startsWith('cf_')&&S.edit){readCliForm();const sb2=$('#simbox');if(sb2)sb2.innerHTML=simTxt(S.edit);return}
+  if(el.id==='gsearch'){gSearch(el.value);return}
+  if(el.dataset.f2==='pq'){S.pq=el.value;clearTimeout(window._pq);window._pq=setTimeout(()=>{const pos=el.selectionStart;render();const e2=document.querySelector('[data-f2=pq]');if(e2){e2.focus();try{e2.setSelectionRange(pos,pos)}catch(_){}}},250);return}
   if(el.dataset.f2==='q'){S.q=el.value;clearTimeout(window._qt);window._qt=setTimeout(()=>{const pos=el.selectionStart;render();const e2=document.querySelector('[data-f2=q]');if(e2){e2.focus();try{e2.setSelectionRange(pos,pos)}catch(_){}}},250);return}
 });
 document.addEventListener('change',ev=>{
@@ -840,6 +1081,12 @@ document.addEventListener('change',ev=>{
   if(el.dataset.f2==='fc'){S.fcm.c=el.value;return render()}
   if(el.dataset.f2==='fm'){if(el.value)S.fcm.m=el.value;return render()}
 });
+function gSearch(v){const box=$('#gres');const q=v.trim().toLowerCase();if(q.length<2){box.hidden=true;return}
+  const r=[];
+  act(S.cli).filter(c=>(c.nome+' '+(c.cnpj||'')+' '+(c.contato||'')).toLowerCase().includes(q)||(onlyD(q).length>=4&&onlyD(c.cnpj).includes(onlyD(q)))).slice(0,4).forEach(c=>r.push(['cli',c.id,'◎',c.nome,c.cnpj?fmtCnpj(c.cnpj):'cliente']));
+  S.prod.filter(p=>(p.sku+' '+(p.nome||'')+' '+(p.ean||'')).toLowerCase().includes(q)).slice(0,5).forEach(p=>r.push(['prod',p.id,'▤',p.sku+' · '+(p.nome||''),((cli(p.cliente_id)||{}).nome||'')+' · disp. '+fn(saldo(p.id).disp)]));
+  S.doc.filter(d=>(d.ref||'').toLowerCase().includes(q)).slice(0,5).forEach(d=>r.push(['doc',d.id,'≡',TIPOS[d.tipo]+' '+(d.ref||''),((cli(d.cliente_id)||{}).nome||'')+' · '+dshort(d.data)]));
+  box.innerHTML=r.length?r.map(x=>`<button class="gr" data-act="gpick" data-k="${x[0]}" data-id="${x[1]}"><span class="st-ic">${x[2]}</span><span><b>${esc(x[3])}</b><div class="mu sm">${esc(x[4])}</div></span></button>`).join(''):'<div class="mu sm" style="padding:8px">Nada encontrado.</div>';box.hidden=false}
 async function saveMini(){
   const m=S.mini;const F=S.form;
   if(m.type==='cli'){const nome=$('#mc_nome').value.trim(),cn=onlyD($('#mc_cnpj').value);const er=$('#mc_err');const fail=(t,id)=>{er.textContent=t;er.hidden=false;$(id).focus()};
